@@ -1,0 +1,1 @@
+const materializeUtils={initSidenav:()=>{let i=document.querySelectorAll(".sidenav");M.Sidenav.init(i)},initCollapsible:(i=".collapsible")=>{let e=document.querySelector(i);return M.Collapsible.init(e)},showAlert:i=>{M.toast({html:i,displayLength:6e3})}};materializeUtils.initCollapsible(),materializeUtils.initSidenav();

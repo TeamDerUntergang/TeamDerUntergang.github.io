@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Primary Meta Tags -->
+	<title>Değişkenler | Seden UserBot</title>
+	<meta name="title" content="Değişken Tanımlamaları | Seden UserBot">
+	<meta name="description" content="Değişken Tanımlamaları | Seden UserBot">
+	<link rel="shortcut icon" href="../assets/seden.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<link href="https://fonts.googleapis.com/css?family=Product+Sans:400,500|Roboto:300,400,500|Roboto+Mono:400,700|Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+	<link rel="stylesheet" href="../css/styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700">
+	<meta name="msapplication-TileColor" content="#BF0046">
+	<meta name="theme-color" content="#BF0046">
+	<meta name="referrer" content="no-referrer" />
+	<script src="../js/theme.js"></script>
+</head>
+
+<body>
+	<!-- NAVBAR -->
+	<div class="navbar-fixed">
+		<nav>
+			<div class="nav-wrapper"> <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large left"><i
+            class="material-icons left">menu</i></a>
+				<a onclick="toogleMenu()" class="sidenav-trigger show-on-large right"><i
+            class="settings material-icons">color_lens</i></a>
+            <a onclick="toogleMenu31()" class="sidenav-trigger show-on-large right"><i
+            class="settings31 material-icons">language</i></a>
+			</div>
+		</nav>
+	</div>
+	<div id="app">
+		<ul id="slide-out" class="sidenav">
+			<div>
+				<div @click="showHomePage" class="bar-logo center">
+					<a href="index.html">
+						<img src="../assets/ecem.png" alt="">
+					</a>
+				</div>
+				<a href="index.html">
+					<div class="j1xlte center">Seden UserBot</div>
+				</a>
+				<div class="capricorn center accent">Makaleler</div>
+				<a href="installation.html">
+					<div class="bbb100-1 bbb100-2">Kurulum Rehberi</div>
+				</a>
+				<a href="configs.html">
+					<div class="bbb100-1 bbb100-2">Değişkenler</div>
+				</a>
+				<a href="aboutus.html">
+					<div class="bbb100-1 bbb100-2">Hakkımızda</div>
+				</a>
+				<a href="ecem.html">
+					<div class="bbb100-1 bbb100-2">Ecem Hakkında</div>
+				</a>
+				<ul class="collapsible collapsible-accordion">
+					<div class="collapsible-body"></div>
+				</ul>
+		</ul>
+		<!-- SETTINGS BUTTON --> <a onclick="toogleMenu()" class="accent"><i id='settings' class="settings material-icons pointer">color_lens</i></a>
+		<div class="menu" style="display: none">
+			<h6 class="accent">Tema Seçenekleri</h6>
+			<div class="line" style="margin-bottom: 12px;"></div>
+			<div> <span class="accent">Arka Plan</span>
+				<div id="backgrounds-render"></div>
+			</div>
+			<div> <span class="accent">Renk</span>
+				<div id="colors-render"></div>
+			</div>
+		</div>
+		<!-- END SETTINGS BUTTON --> <a onclick="toogleMenu31()" class="accent"><i id='settings31' class="settings31 material-icons pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
+</i></a>
+		<div class="menu31" style="display: none">
+			<h6 class="accent">Dil Seçenekleri</h6>
+			<div class="line" style="margin-bottom: 12px;"></div>
+			<div> <span class="accent"><a href="../configs.html">English</a></span>
+			</div>
+			<div> <span class="accent"><a href="configs.html">Türkçe</a></span>
+			</div>
+		</div> <a onclick="toogleMenu31()" class="accent"><i id='settings31' class="settings31 material-icons pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"../></svg>
+</i></a>
+		<div class="menu31" style="display: none">
+			<h6 class="accent">Dil Seçenekleri</h6>
+			<div class="line" style="margin-bottom: 12px;"></div>
+			<div> <span class="accent"><a href="configs.html">Türkçe</a></span>
+			</div>
+			<div> <span class="accent"><a href="../configs.html">English</a></span>
+			</div>
+		</div>
+		<!-- WELCOME -->
+		<div class='home center'>
+			<div class="home-desc">
+				<div id="particles-js"></div>
+				<div class="gracelte">Seden UserBot Değişkenleri</div>
+				<br/>
+				<div class="ecem">Bu yazımızda size Seden UserBot'un mevcut olan değişkenleri göstereceğiz.
+					<br/>
+					<br/>
+				</div>
+				<br/>
+				<div class="sac">API_ID</div>
+				<div class="ecem">Bu değeri <a href="https://my.telegram.org">https://my.telegram.org</a> adresinden alın. Botun çalışması için gerekli bir değerdir.
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">API_HASH</div>
+				<div class="ecem">Bu değeri <a href="https://my.telegram.org">https://my.telegram.org</a> adresinden alın. Botun çalışması için gerekli bir değerdir.
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">SESSION</div>
+				<div class="ecem">Seden UserBot Session scriptini çalıştırarak bu değeri edinin. Botun çalışması için gerekli bir değerdir.
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">HEROKU_APPNAME</div>
+				<div class="ecem">Eğer botunuzu Heroku üzerinde çalıştırıyorsanız uygulamanızın adını bu değere yazın. Güncellemeler için zorunludur. Eğer bir sunucu ya da başka bir yerde çalıştırıyorsanız belirtmenize gerek yoktur.
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">HEROKU_KEY</div>
+				<div class="ecem">Eğer botunuzu Heroku üzerinde çalıştırıyorsanız bu değeri <a href="https://dashboard.heroku.com/account">https://dashboard.heroku.com/account</a> adresinden alın. Güncellemeler için zorunludur. Eğer bir sunucu ya da başka bir yerde çalıştırıyorsanız belirtmenize gerek yoktur.
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">REPO_URL</div>
+				<div class="ecem">Güncelleme yapmak için gerekli olan değişkendir. Varsayılan olarak kendi repo adresimiz eklidir.
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">LOG_ID</div>
+				<div class="ecem">Log Grubu için belirtmeniz gereken Grup ID'si. Değeri 0 yaparsanız bot log tutmaz. Değeri boş bırakırsanız kayıtlı mesajlara log gönderir.
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">LOG_VERBOSE</div>
+				<div class="ecem">Konsol günlüğünde ayrıntıya ihtiyacınız varsa, bu değeri "True" olarak ayarlayabilirsiniz.
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">CHROME_DRIVER</div>
+				<div class="ecem">Selenium tabanlı modüller için ChromeDriver konumudur. (Örnek: /usr/bin/chromedriver)
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">BOT_PREFIX</div>
+				<div class="ecem">Botunuzun pattern algılamasını değiştirir. Varsayılan olarak "." (Nokta) vardır.
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">SEDEN_LANG</div>
+				<div class="ecem">Seden Botunuzun dilini değiştirir. Mevcut diller Türkçe (tr), İngilizce (en) ve Almanca (de).
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">ALIVE_MSG</div>
+				<div class="ecem">.alive komutunda ki yazıyı değiştirmenizi sağlar.</div>
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">DOWNLOAD_DIRECTORY</div>
+				<div class="ecem">Birçok modül için indirme konumu (.download vb..)
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">GENIUS_TOKEN</div>
+				<div class="ecem">Lyrics modülü için gereken Genius API Key, <a href="https://genius.com/developers">https://genius.com/developers</a> adresinden alabilirsiniz.
+					<br/>
+					<br/>
+                </div>
+				<div class="sac">DEEZER_TOKEN</div>
+				<div class="ecem">Deezer modülü için gereken Deezer ARL Key, <a href="https://www.deezer.com/us/">https://www.deezer.com</a> adresinder alabilirsiniz. Video <a href="https://www.youtube.com/watch?v=cxgU87LCkOs">https://www.youtube.com/watch?v=cxgU87LCkOs</a>
+					<br/>
+					<br/>
+				</div>
+                <div class="sac">LASTFM_API</div>
+                <div class="ecem">Last.fm modülü için gereklidir. <a href="https://www.last.fm/api/account/create">https://www.last.fm/api/account/create</a> adresinden alabilirsiniz.
+                    <br/>
+                    <br/>
+                </div>
+                <div class="sac">LASTFM_PASSWORD</div>
+                <div class="ecem">Last.fm şifresi
+                    <br/>
+                    <br/>
+                </div>
+                <div class="sac">LASTFM_SECRET</div>
+                <div class="ecem">Secret Key. <a href="https://www.last.fm/api/account/create">https://www.last.fm/api/account/create</a> adresinden alabilirsiniz.
+                    <br/>
+                    <br/>
+                </div>
+                <div class="sac">LASTFM_USERNAME</div>
+                <div class="ecem">Last.fm kullanıcı adı.
+                    <br/>
+                    <br/>
+                </div>
+                <div class="sac">LYDIA_APIKEY</div>
+                <div class="ecem">Lydia modülü için gereklidir. <a href="https://coffeehouse.intellivoid.info/dashboard">https://coffeehouse.intellivoid.info/dashboard</a> adresinden alabilirsiniz.
+                    <br/>
+                    <br/>
+                </div>
+				<div class="sac">OCR_APIKEY</div>
+				<div class="ecem">.ocr komutu için OCR API Key. <a href="https://ocr.space/ocrapi">https://ocr.space/ocrapi</a> adresinden alabilirsiniz.
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">WEATHER</div>
+				<div class="ecem">Hava durumu modülü için varsayılan şehri ayarlamanızı sağlar.
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">RBG_APIKEY</div>
+				<div class="ecem">.rbg komutu için API Key. <a href="https://www.remove.bg/api">https://www.remove.bg/api</a> adresinden alabilirsiniz.
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">PM_UNAPPROVED</div>
+				<div class="ecem">Pmpermit modülü için PM özel mesaj ayarlama özelliğidir. Varsayılan olarak kendi mesajımız mevcuttur.
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">PM_MSG_COUNT</div>
+				<div class="ecem">Pmpermit modülü için PM mesaj limitidir. Varsayılan değer "5" (Beş) dir.
+					<br/>
+					<br/>
+				</div>
+				<div class="sac">PM_AUTO_BAN</div>
+				<div class="ecem">Pmpermit modülü için PM yasaklama özelliğidir. Aktifleştirmek için bu değeri "True" olarak ayarlayabilirsiniz.
+				<div class="home-bottom-info">
+					<div class="home-bottom-info-content">
+						<a href="https://t.me/SedenUserBot" target="_blank">
+							<div title="Telegram Kanalı">
+								<svg width="32" height="32" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+									<path d="M12,0c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12Zm0,2c5.514,0 10,4.486 10,10c0,5.514 -4.486,10 -10,10c-5.514,0 -10,-4.486 -10,-10c0,-5.514 4.486,-10 10,-10Zm2.692,14.889c0.161,0.115 0.368,0.143 0.553,0.073c0.185,-0.07 0.322,-0.228 0.362,-0.42c0.435,-2.042 1.489,-7.211 1.884,-9.068c0.03,-0.14 -0.019,-0.285 -0.129,-0.379c-0.11,-0.093 -0.263,-0.12 -0.399,-0.07c-2.096,0.776 -8.553,3.198 -11.192,4.175c-0.168,0.062 -0.277,0.223 -0.271,0.4c0.006,0.177 0.125,0.33 0.296,0.381c1.184,0.354 2.738,0.847 2.738,0.847c0,0 0.725,2.193 1.104,3.308c0.047,0.139 0.157,0.25 0.301,0.287c0.145,0.038 0.298,-0.001 0.406,-0.103c0.608,-0.574 1.548,-1.461 1.548,-1.461c0,0 1.786,1.309 2.799,2.03Zm-5.505,-4.338l0.84,2.769l0.186,-1.754c0,0 3.243,-2.925 5.092,-4.593c0.055,-0.048 0.062,-0.13 0.017,-0.188c-0.045,-0.057 -0.126,-0.071 -0.188,-0.032c-2.143,1.368 -5.947,3.798 -5.947,3.798Z" />
+								</svg>
+							</div>
+						</a>
+						<a href="https://github.com/TeamDerUntergang" target="_blank">
+							<div title="GitHub Kaynak Kodu">
+								<svg width="32" height="32">
+									<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+								</svg>
+							</div>
+						</a>
+						<a href="https://t.me/SedenUserBotSupport" target="_blank">
+							<div title="Telegram Grubu">
+								<svg width="32" height="32" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+									<path d="M12,0c-6.626,0 -12,5.372 -12,12c0,6.627 5.374,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.628 -5.373,-12 -12,-12Zm3.224,17.871c0.188,0.133 0.43,0.166 0.646,0.085c0.215,-0.082 0.374,-0.267 0.422,-0.491c0.507,-2.382 1.737,-8.412 2.198,-10.578c0.035,-0.164 -0.023,-0.334 -0.151,-0.443c-0.129,-0.109 -0.307,-0.14 -0.465,-0.082c-2.446,0.906 -9.979,3.732 -13.058,4.871c-0.195,0.073 -0.322,0.26 -0.316,0.467c0.007,0.206 0.146,0.385 0.346,0.445c1.381,0.413 3.193,0.988 3.193,0.988c0,0 0.847,2.558 1.288,3.858c0.056,0.164 0.184,0.292 0.352,0.336c0.169,0.044 0.348,-0.002 0.474,-0.121c0.709,-0.669 1.805,-1.704 1.805,-1.704c0,0 2.084,1.527 3.266,2.369Zm-6.423,-5.062l0.98,3.231l0.218,-2.046c0,0 3.783,-3.413 5.941,-5.358c0.063,-0.057 0.071,-0.153 0.019,-0.22c-0.052,-0.067 -0.148,-0.083 -0.219,-0.037c-2.5,1.596 -6.939,4.43 -6.939,4.43Z" />
+								</svg>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class='credits'>Seden UserBot projesi <a href="https://github.com/NaytSeyd">NaytSeyd</a> tarafından yönetilmektedir.</div>
+				<div class='credits'>Bu websitesi <a href="https://github.com/ciyanogen">Seden Ecem</a> ve <a href="https://github.com/andersonmendess">andersonmendess</a> tarafından hazırlanmıştır.</div>
+				<div class='credits'>Seden UserBot ve tüm diğer projeler <a href="https://www.gnu.org/licenses/agpl-3.0.tr.html">AGPLv3</a> lisansına tabidir.</a>
+				</div>
+				<!-- END WELCOME -->
+			</div>
+		</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+<script src="../js/sidebar.js"></script>
+<script type="text/javascript" src="../js/particles.min.js"></script>
+<script type="text/javascript" src="../js/particles-configuration.js"></script>
+
+</html>
